@@ -170,13 +170,6 @@ end TCL_Generic;&#13;
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="0" loc="(220,740)" name="Clock">
-      <a name="label" val="SNES_clock"/>
-    </comp>
-    <comp lib="0" loc="(230,680)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="SNES_latch"/>
-    </comp>
     <comp lib="0" loc="(320,400)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -204,11 +197,15 @@ end TCL_Generic;&#13;
       <a name="appearance" val="NewPins"/>
       <a name="label" val="C_start"/>
     </comp>
-    <comp lib="0" loc="(540,760)" name="Pin">
+    <comp lib="0" loc="(550,870)" name="Clock"/>
+    <comp lib="0" loc="(580,760)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="SNES_data1"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(60,740)" name="Pin">
+      <a name="appearance" val="NewPins"/>
     </comp>
     <comp lib="10" loc="(610,870)" name="Digital Oscilloscope"/>
     <comp lib="8" loc="(604,862)" name="Text">
@@ -216,25 +213,33 @@ end TCL_Generic;&#13;
       <a name="halign" val="right"/>
       <a name="text" val="clock"/>
     </comp>
-    <comp lib="8" loc="(605,890)" name="Text">
+    <comp lib="8" loc="(605,920)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_latch"/>
     </comp>
-    <comp lib="8" loc="(607,922)" name="Text">
+    <comp lib="8" loc="(606,890)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="right"/>
+      <a name="text" val="SNES_clack"/>
+    </comp>
+    <comp lib="8" loc="(607,952)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_data1"/>
     </comp>
+    <comp loc="(230,740)" name="SNES"/>
     <comp loc="(500,720)" name="CD4021B"/>
-    <wire from="(220,740)" to="(260,740)"/>
-    <wire from="(230,680)" to="(290,680)"/>
-    <wire from="(260,740)" to="(260,870)"/>
-    <wire from="(260,740)" to="(320,740)"/>
-    <wire from="(260,870)" to="(610,870)"/>
-    <wire from="(290,680)" to="(290,900)"/>
+    <wire from="(230,740)" to="(310,740)"/>
+    <wire from="(230,760)" to="(260,760)"/>
+    <wire from="(260,680)" to="(260,760)"/>
+    <wire from="(260,680)" to="(290,680)"/>
+    <wire from="(290,680)" to="(290,930)"/>
     <wire from="(290,680)" to="(320,680)"/>
-    <wire from="(290,900)" to="(610,900)"/>
+    <wire from="(290,930)" to="(610,930)"/>
+    <wire from="(310,740)" to="(310,900)"/>
+    <wire from="(310,740)" to="(320,740)"/>
+    <wire from="(310,900)" to="(610,900)"/>
     <wire from="(320,400)" to="(470,400)"/>
     <wire from="(320,430)" to="(450,430)"/>
     <wire from="(320,460)" to="(430,460)"/>
@@ -252,9 +257,11 @@ end TCL_Generic;&#13;
     <wire from="(450,430)" to="(450,640)"/>
     <wire from="(470,400)" to="(470,640)"/>
     <wire from="(500,760)" to="(520,760)"/>
-    <wire from="(520,760)" to="(520,930)"/>
-    <wire from="(520,760)" to="(540,760)"/>
-    <wire from="(520,930)" to="(610,930)"/>
+    <wire from="(520,760)" to="(520,960)"/>
+    <wire from="(520,760)" to="(580,760)"/>
+    <wire from="(520,960)" to="(610,960)"/>
+    <wire from="(550,870)" to="(610,870)"/>
+    <wire from="(60,740)" to="(100,740)"/>
   </circuit>
   <circuit name="CD4021B_dff">
     <a name="appearance" val="custom"/>
@@ -1193,13 +1200,25 @@ end TCL_Generic;&#13;
     <wire from="(370,460)" to="(370,510)"/>
   </circuit>
   <circuit name="SNES">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="SNES"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="197" y="57"/>
+      <circ-port height="10" pin="710,490" width="10" x="195" y="55"/>
+      <circ-port height="10" pin="710,530" width="10" x="195" y="75"/>
+      <circ-port height="8" pin="230,420" width="8" x="66" y="56"/>
+      <circ-port height="8" pin="240,610" width="8" x="66" y="76"/>
+      <rect fill="none" height="40" stroke="#000000" stroke-width="2" width="130" x="70" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="189" y="63">CLACK</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="189" y="83">LATCH</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="80" y="63">RESET</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="80" y="83">DATA1</text>
+    </appear>
     <comp lib="0" loc="(210,480)" name="Clock"/>
     <comp lib="0" loc="(230,420)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -1210,14 +1229,14 @@ end TCL_Generic;&#13;
       <a name="appearance" val="NewPins"/>
       <a name="label" val="DATA1"/>
     </comp>
-    <comp lib="0" loc="(440,780)" name="Splitter"/>
-    <comp lib="0" loc="(700,570)" name="Pin">
+    <comp lib="0" loc="(600,510)" name="Splitter"/>
+    <comp lib="0" loc="(710,490)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="CLACK"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(700,630)" name="Pin">
+    <comp lib="0" loc="(710,530)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="LATCH"/>
@@ -1269,7 +1288,7 @@ end TCL_Generic;&#13;
 11xxxx 01 # (padding)
 </a>
     </comp>
-    <comp lib="10" loc="(550,730)" name="Digital Oscilloscope"/>
+    <comp lib="10" loc="(760,660)" name="Digital Oscilloscope"/>
     <comp lib="4" loc="(290,400)" name="Counter">
       <a name="appearance" val="logisim_evolution"/>
       <a name="max" val="0x3f"/>
@@ -1277,18 +1296,19 @@ end TCL_Generic;&#13;
     </comp>
     <wire from="(210,480)" to="(270,480)"/>
     <wire from="(230,420)" to="(290,420)"/>
-    <wire from="(270,480)" to="(270,730)"/>
+    <wire from="(270,480)" to="(270,660)"/>
     <wire from="(270,480)" to="(290,480)"/>
-    <wire from="(270,730)" to="(550,730)"/>
-    <wire from="(390,660)" to="(390,780)"/>
-    <wire from="(390,660)" to="(570,660)"/>
-    <wire from="(390,780)" to="(440,780)"/>
-    <wire from="(460,760)" to="(550,760)"/>
-    <wire from="(460,770)" to="(520,770)"/>
+    <wire from="(270,660)" to="(760,660)"/>
     <wire from="(480,510)" to="(500,510)"/>
-    <wire from="(520,770)" to="(520,790)"/>
-    <wire from="(520,790)" to="(550,790)"/>
-    <wire from="(550,510)" to="(570,510)"/>
-    <wire from="(570,510)" to="(570,660)"/>
+    <wire from="(550,510)" to="(600,510)"/>
+    <wire from="(620,490)" to="(660,490)"/>
+    <wire from="(620,500)" to="(630,500)"/>
+    <wire from="(630,500)" to="(630,530)"/>
+    <wire from="(630,530)" to="(630,720)"/>
+    <wire from="(630,530)" to="(710,530)"/>
+    <wire from="(630,720)" to="(760,720)"/>
+    <wire from="(660,490)" to="(660,690)"/>
+    <wire from="(660,490)" to="(710,490)"/>
+    <wire from="(660,690)" to="(760,690)"/>
   </circuit>
 </project>
