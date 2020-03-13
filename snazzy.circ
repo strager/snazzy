@@ -170,6 +170,16 @@ end TCL_Generic;&#13;
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(190,900)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="halt"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(270,880)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
     <comp lib="0" loc="(320,400)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -204,6 +214,12 @@ end TCL_Generic;&#13;
       <a name="label" val="SNES_data1"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(580,790)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="SNES_clack"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(60,740)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -230,16 +246,19 @@ end TCL_Generic;&#13;
     </comp>
     <comp loc="(230,740)" name="SNES"/>
     <comp loc="(500,720)" name="CD4021B"/>
+    <wire from="(190,900)" to="(250,900)"/>
     <wire from="(230,740)" to="(310,740)"/>
     <wire from="(230,760)" to="(260,760)"/>
+    <wire from="(230,780)" to="(270,780)"/>
     <wire from="(260,680)" to="(260,760)"/>
     <wire from="(260,680)" to="(290,680)"/>
+    <wire from="(270,780)" to="(270,880)"/>
     <wire from="(290,680)" to="(290,930)"/>
     <wire from="(290,680)" to="(320,680)"/>
     <wire from="(290,930)" to="(610,930)"/>
     <wire from="(310,740)" to="(310,900)"/>
     <wire from="(310,740)" to="(320,740)"/>
-    <wire from="(310,900)" to="(610,900)"/>
+    <wire from="(310,900)" to="(560,900)"/>
     <wire from="(320,400)" to="(470,400)"/>
     <wire from="(320,430)" to="(450,430)"/>
     <wire from="(320,460)" to="(430,460)"/>
@@ -261,6 +280,9 @@ end TCL_Generic;&#13;
     <wire from="(520,760)" to="(580,760)"/>
     <wire from="(520,960)" to="(610,960)"/>
     <wire from="(550,870)" to="(610,870)"/>
+    <wire from="(560,790)" to="(560,900)"/>
+    <wire from="(560,790)" to="(580,790)"/>
+    <wire from="(560,900)" to="(610,900)"/>
     <wire from="(60,740)" to="(100,740)"/>
   </circuit>
   <circuit name="CD4021B_dff">
@@ -303,7 +325,6 @@ end TCL_Generic;&#13;
     <comp lib="0" loc="(320,450)" name="Transmission Gate"/>
     <comp lib="0" loc="(340,300)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="CL"/>
     </comp>
     <comp lib="0" loc="(350,320)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -822,7 +843,6 @@ end TCL_Generic;&#13;
     <comp lib="0" loc="(440,560)" name="Transmission Gate"/>
     <comp lib="0" loc="(460,300)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="CL"/>
     </comp>
     <comp lib="0" loc="(470,320)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -1211,9 +1231,11 @@ end TCL_Generic;&#13;
       <circ-anchor facing="east" height="6" width="6" x="197" y="57"/>
       <circ-port height="10" pin="710,490" width="10" x="195" y="55"/>
       <circ-port height="10" pin="710,530" width="10" x="195" y="75"/>
+      <circ-port height="10" pin="790,280" width="10" x="195" y="95"/>
       <circ-port height="8" pin="230,420" width="8" x="66" y="56"/>
       <circ-port height="8" pin="240,610" width="8" x="66" y="76"/>
-      <rect fill="none" height="40" stroke="#000000" stroke-width="2" width="130" x="70" y="50"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="130" x="70" y="50"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="189" y="103">ROUND</text>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="189" y="63">CLACK</text>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="189" y="83">LATCH</text>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="80" y="63">RESET</text>
@@ -1241,6 +1263,13 @@ end TCL_Generic;&#13;
       <a name="facing" val="west"/>
       <a name="label" val="LATCH"/>
       <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(790,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ROUND"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
     </comp>
     <comp lib="1" loc="(500,510)" name="PLA">
       <a name="in_width" val="6"/>
@@ -1294,12 +1323,18 @@ end TCL_Generic;&#13;
       <a name="max" val="0x3f"/>
       <a name="width" val="6"/>
     </comp>
+    <comp lib="4" loc="(550,170)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <wire from="(210,480)" to="(270,480)"/>
     <wire from="(230,420)" to="(290,420)"/>
     <wire from="(270,480)" to="(270,660)"/>
     <wire from="(270,480)" to="(290,480)"/>
     <wire from="(270,660)" to="(760,660)"/>
+    <wire from="(480,450)" to="(530,450)"/>
     <wire from="(480,510)" to="(500,510)"/>
+    <wire from="(530,250)" to="(530,450)"/>
+    <wire from="(530,250)" to="(550,250)"/>
     <wire from="(550,510)" to="(600,510)"/>
     <wire from="(620,490)" to="(660,490)"/>
     <wire from="(620,500)" to="(630,500)"/>
@@ -1310,5 +1345,6 @@ end TCL_Generic;&#13;
     <wire from="(660,490)" to="(660,690)"/>
     <wire from="(660,490)" to="(710,490)"/>
     <wire from="(660,690)" to="(760,690)"/>
+    <wire from="(740,280)" to="(790,280)"/>
   </circuit>
 </project>
