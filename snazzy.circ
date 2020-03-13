@@ -141,11 +141,10 @@ end TCL_Generic;&#13;
     <sep/>
     <tool lib="0" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="facing" val="south"/>
     </tool>
     <tool lib="0" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </tool>
     <sep/>
@@ -1192,5 +1191,104 @@ end TCL_Generic;&#13;
     <wire from="(330,510)" to="(370,510)"/>
     <wire from="(370,330)" to="(370,400)"/>
     <wire from="(370,460)" to="(370,510)"/>
+  </circuit>
+  <circuit name="SNES">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="SNES"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(210,480)" name="Clock"/>
+    <comp lib="0" loc="(230,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="RESET"/>
+    </comp>
+    <comp lib="0" loc="(240,610)" name="NoConnect"/>
+    <comp lib="0" loc="(240,610)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="DATA1"/>
+    </comp>
+    <comp lib="0" loc="(440,780)" name="Splitter"/>
+    <comp lib="0" loc="(700,570)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="CLACK"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(700,630)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="LATCH"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(500,510)" name="PLA">
+      <a name="in_width" val="6"/>
+      <a name="table">000000 01 # init
+000001 11 # latch on
+000010 11
+000011 01 # latch off
+000100 00 # start clock: B
+000101 01
+000110 00 # Y
+000111 01
+001000 00 # select
+001001 01
+001010 00 # start
+001011 01
+001100 00 # up
+001101 01
+001110 00 # down
+001111 01
+010000 00 # left
+010001 01
+010010 00 # right
+010011 01
+010100 00 # A
+010101 01
+010110 00 # X
+010111 01
+011000 00 # L
+011001 01
+011010 00 # R
+011011 01
+011100 00 # (high)
+011101 01
+011110 00 # (high)
+011111 01
+100000 00 # (high)
+100001 01
+100010 00 # (high)
+100011 01 # end clock
+100100 01
+100101 01
+100110 01
+100111 01
+101xxx 01 # (padding)
+11xxxx 01 # (padding)
+</a>
+    </comp>
+    <comp lib="10" loc="(550,730)" name="Digital Oscilloscope"/>
+    <comp lib="4" loc="(290,400)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="max" val="0x3f"/>
+      <a name="width" val="6"/>
+    </comp>
+    <wire from="(210,480)" to="(270,480)"/>
+    <wire from="(230,420)" to="(290,420)"/>
+    <wire from="(270,480)" to="(270,730)"/>
+    <wire from="(270,480)" to="(290,480)"/>
+    <wire from="(270,730)" to="(550,730)"/>
+    <wire from="(390,660)" to="(390,780)"/>
+    <wire from="(390,660)" to="(570,660)"/>
+    <wire from="(390,780)" to="(440,780)"/>
+    <wire from="(460,760)" to="(550,760)"/>
+    <wire from="(460,770)" to="(520,770)"/>
+    <wire from="(480,510)" to="(500,510)"/>
+    <wire from="(520,770)" to="(520,790)"/>
+    <wire from="(520,790)" to="(550,790)"/>
+    <wire from="(550,510)" to="(570,510)"/>
+    <wire from="(570,510)" to="(570,660)"/>
   </circuit>
 </project>
