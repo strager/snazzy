@@ -10,10 +10,6 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
     </tool>
-    <tool name="Constant">
-      <a name="value" val="0x3"/>
-      <a name="width" val="2"/>
-    </tool>
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="NOT Gate">
@@ -153,7 +149,9 @@ end TCL_Generic;&#13;
       <a name="output" val="true"/>
     </tool>
     <sep/>
-    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </tool>
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
     <tool lib="1" name="XOR Gate"/>
@@ -185,42 +183,58 @@ end TCL_Generic;&#13;
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(550,870)" name="Clock"/>
-    <comp lib="0" loc="(580,760)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="SNES_data1"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(330,610)" name="Constant">
+      <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(580,790)" name="Pin">
+    <comp lib="0" loc="(580,1020)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="SNES_clack"/>
+      <a name="label" val="SNES_latch"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(60,740)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="10" loc="(610,870)" name="Digital Oscilloscope"/>
-    <comp lib="12" loc="(370,600)" name="snes_buttons">
+    <comp lib="0" loc="(650,870)" name="Clock"/>
+    <comp lib="0" loc="(680,760)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="SNES_data1"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(680,790)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="SNES_clack"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(410,590)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="8" loc="(604,862)" name="Text">
+    <comp lib="1" loc="(430,590)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(550,760)" name="NOT Gate"/>
+    <comp lib="10" loc="(710,870)" name="Digital Oscilloscope"/>
+    <comp lib="12" loc="(430,550)" name="snes_buttons">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="8" loc="(704,862)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="clock"/>
     </comp>
-    <comp lib="8" loc="(605,920)" name="Text">
+    <comp lib="8" loc="(705,920)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_latch"/>
     </comp>
-    <comp lib="8" loc="(606,890)" name="Text">
+    <comp lib="8" loc="(706,890)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_clack"/>
     </comp>
-    <comp lib="8" loc="(607,952)" name="Text">
+    <comp lib="8" loc="(707,952)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_data1"/>
@@ -236,22 +250,39 @@ end TCL_Generic;&#13;
     <wire from="(270,780)" to="(270,880)"/>
     <wire from="(290,680)" to="(290,930)"/>
     <wire from="(290,680)" to="(320,680)"/>
-    <wire from="(290,930)" to="(610,930)"/>
+    <wire from="(290,930)" to="(490,930)"/>
     <wire from="(310,740)" to="(310,900)"/>
     <wire from="(310,740)" to="(320,740)"/>
-    <wire from="(310,900)" to="(560,900)"/>
-    <wire from="(330,600)" to="(330,640)"/>
-    <wire from="(350,600)" to="(350,640)"/>
-    <wire from="(370,600)" to="(370,640)"/>
+    <wire from="(310,900)" to="(660,900)"/>
+    <wire from="(330,610)" to="(330,620)"/>
+    <wire from="(330,620)" to="(330,640)"/>
+    <wire from="(330,620)" to="(350,620)"/>
+    <wire from="(350,620)" to="(350,640)"/>
+    <wire from="(350,620)" to="(370,620)"/>
+    <wire from="(370,620)" to="(370,640)"/>
+    <wire from="(370,620)" to="(390,620)"/>
+    <wire from="(390,620)" to="(390,640)"/>
+    <wire from="(390,620)" to="(450,620)"/>
+    <wire from="(410,550)" to="(410,560)"/>
+    <wire from="(410,590)" to="(410,640)"/>
+    <wire from="(430,550)" to="(430,560)"/>
+    <wire from="(430,590)" to="(430,640)"/>
+    <wire from="(450,620)" to="(450,640)"/>
+    <wire from="(450,620)" to="(470,620)"/>
+    <wire from="(470,620)" to="(470,640)"/>
+    <wire from="(490,1020)" to="(580,1020)"/>
+    <wire from="(490,930)" to="(490,1020)"/>
+    <wire from="(490,930)" to="(710,930)"/>
     <wire from="(500,760)" to="(520,760)"/>
-    <wire from="(520,760)" to="(520,960)"/>
-    <wire from="(520,760)" to="(580,760)"/>
-    <wire from="(520,960)" to="(610,960)"/>
-    <wire from="(550,870)" to="(610,870)"/>
-    <wire from="(560,790)" to="(560,900)"/>
-    <wire from="(560,790)" to="(580,790)"/>
-    <wire from="(560,900)" to="(610,900)"/>
+    <wire from="(550,760)" to="(620,760)"/>
     <wire from="(60,740)" to="(100,740)"/>
+    <wire from="(620,760)" to="(620,960)"/>
+    <wire from="(620,760)" to="(680,760)"/>
+    <wire from="(620,960)" to="(710,960)"/>
+    <wire from="(650,870)" to="(710,870)"/>
+    <wire from="(660,790)" to="(660,900)"/>
+    <wire from="(660,790)" to="(680,790)"/>
+    <wire from="(660,900)" to="(710,900)"/>
   </circuit>
   <circuit name="CD4021B_dff">
     <a name="appearance" val="custom"/>
