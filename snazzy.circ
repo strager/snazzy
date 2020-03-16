@@ -10,6 +10,10 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
     </tool>
+    <tool name="Constant">
+      <a name="value" val="0x3"/>
+      <a name="width" val="2"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="NOT Gate">
@@ -208,10 +212,10 @@ end TCL_Generic;&#13;
       <a name="label" val="SNES_clack"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(410,590)" name="NOT Gate">
+    <comp lib="1" loc="(410,600)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(430,590)" name="NOT Gate">
+    <comp lib="1" loc="(430,600)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
     <comp lib="1" loc="(550,760)" name="NOT Gate"/>
@@ -263,10 +267,12 @@ end TCL_Generic;&#13;
     <wire from="(370,620)" to="(390,620)"/>
     <wire from="(390,620)" to="(390,640)"/>
     <wire from="(390,620)" to="(450,620)"/>
-    <wire from="(410,550)" to="(410,560)"/>
-    <wire from="(410,590)" to="(410,640)"/>
-    <wire from="(430,550)" to="(430,560)"/>
-    <wire from="(430,590)" to="(430,640)"/>
+    <wire from="(410,560)" to="(410,570)"/>
+    <wire from="(410,560)" to="(420,560)"/>
+    <wire from="(410,600)" to="(410,640)"/>
+    <wire from="(420,550)" to="(420,560)"/>
+    <wire from="(430,550)" to="(430,570)"/>
+    <wire from="(430,600)" to="(430,640)"/>
     <wire from="(450,620)" to="(450,640)"/>
     <wire from="(450,620)" to="(470,620)"/>
     <wire from="(470,620)" to="(470,640)"/>
