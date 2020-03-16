@@ -562,7 +562,10 @@ def main() -> None:
         "down",
         "left",
         "right",
-        # TODO(strager): 'a', 'x', 'l', 'r'
+        "a",
+        "x",
+        "l",
+        "r",
     ]
     for button_to_check in buttons_to_check:
         buttons = Buttons.OFF._replace(**{button_to_check: True})

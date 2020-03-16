@@ -187,79 +187,93 @@ end TCL_Generic;&#13;
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(580,1020)" name="Pin">
+    <comp lib="0" loc="(370,570)" name="Constant"/>
+    <comp lib="0" loc="(60,740)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(830,1020)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="SNES_latch"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(60,740)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(650,870)" name="Clock"/>
-    <comp lib="0" loc="(680,760)" name="Pin">
+    <comp lib="0" loc="(900,870)" name="Clock"/>
+    <comp lib="0" loc="(930,760)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="SNES_data1"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(680,790)" name="Pin">
+    <comp lib="0" loc="(930,790)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="SNES_clack"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="1" loc="(340,490)" name="NOT Gate">
+    <comp lib="1" loc="(570,490)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(360,490)" name="NOT Gate">
+    <comp lib="1" loc="(580,540)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(380,490)" name="NOT Gate">
+    <comp lib="1" loc="(590,490)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(390,540)" name="NOT Gate">
+    <comp lib="1" loc="(600,540)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(400,490)" name="NOT Gate">
+    <comp lib="1" loc="(610,490)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(410,540)" name="NOT Gate">
+    <comp lib="1" loc="(620,540)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(420,490)" name="NOT Gate">
+    <comp lib="1" loc="(630,490)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(430,540)" name="NOT Gate">
+    <comp lib="1" loc="(640,540)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(550,760)" name="NOT Gate"/>
-    <comp lib="10" loc="(710,870)" name="Digital Oscilloscope"/>
-    <comp lib="12" loc="(430,450)" name="snes_buttons">
+    <comp lib="1" loc="(650,490)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="8" loc="(704,862)" name="Text">
+    <comp lib="1" loc="(660,540)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(670,490)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(680,540)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(800,760)" name="NOT Gate"/>
+    <comp lib="10" loc="(960,870)" name="Digital Oscilloscope"/>
+    <comp lib="12" loc="(680,450)" name="snes_buttons">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="8" loc="(954,862)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="clock"/>
     </comp>
-    <comp lib="8" loc="(705,920)" name="Text">
+    <comp lib="8" loc="(955,920)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_latch"/>
     </comp>
-    <comp lib="8" loc="(706,890)" name="Text">
+    <comp lib="8" loc="(956,890)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_clack"/>
     </comp>
-    <comp lib="8" loc="(707,952)" name="Text">
+    <comp lib="8" loc="(957,952)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="halign" val="right"/>
       <a name="text" val="SNES_data1"/>
     </comp>
     <comp loc="(230,740)" name="SNES"/>
     <comp loc="(500,720)" name="CD4021B"/>
+    <comp loc="(750,720)" name="CD4021B"/>
     <wire from="(190,900)" to="(250,900)"/>
     <wire from="(230,740)" to="(310,740)"/>
     <wire from="(230,760)" to="(260,760)"/>
@@ -269,53 +283,88 @@ end TCL_Generic;&#13;
     <wire from="(270,780)" to="(270,880)"/>
     <wire from="(290,680)" to="(290,930)"/>
     <wire from="(290,680)" to="(320,680)"/>
-    <wire from="(290,930)" to="(490,930)"/>
+    <wire from="(290,930)" to="(550,930)"/>
     <wire from="(310,740)" to="(310,900)"/>
     <wire from="(310,740)" to="(320,740)"/>
-    <wire from="(310,900)" to="(660,900)"/>
-    <wire from="(330,590)" to="(330,640)"/>
-    <wire from="(330,590)" to="(400,590)"/>
-    <wire from="(340,450)" to="(340,460)"/>
-    <wire from="(340,490)" to="(340,560)"/>
-    <wire from="(340,560)" to="(470,560)"/>
-    <wire from="(350,600)" to="(350,640)"/>
-    <wire from="(350,600)" to="(410,600)"/>
-    <wire from="(360,450)" to="(360,460)"/>
-    <wire from="(360,490)" to="(360,570)"/>
-    <wire from="(360,570)" to="(450,570)"/>
-    <wire from="(370,580)" to="(370,640)"/>
-    <wire from="(370,580)" to="(380,580)"/>
-    <wire from="(380,450)" to="(380,460)"/>
-    <wire from="(380,490)" to="(380,580)"/>
-    <wire from="(390,450)" to="(390,510)"/>
-    <wire from="(390,540)" to="(390,640)"/>
-    <wire from="(400,450)" to="(400,460)"/>
-    <wire from="(400,490)" to="(400,590)"/>
-    <wire from="(410,450)" to="(410,510)"/>
-    <wire from="(410,540)" to="(410,600)"/>
-    <wire from="(410,610)" to="(410,640)"/>
-    <wire from="(410,610)" to="(430,610)"/>
-    <wire from="(420,450)" to="(420,460)"/>
-    <wire from="(420,490)" to="(420,620)"/>
-    <wire from="(420,620)" to="(430,620)"/>
-    <wire from="(430,450)" to="(430,510)"/>
-    <wire from="(430,540)" to="(430,610)"/>
-    <wire from="(430,620)" to="(430,640)"/>
-    <wire from="(450,570)" to="(450,640)"/>
-    <wire from="(470,560)" to="(470,640)"/>
-    <wire from="(490,1020)" to="(580,1020)"/>
-    <wire from="(490,930)" to="(490,1020)"/>
-    <wire from="(490,930)" to="(710,930)"/>
-    <wire from="(500,760)" to="(520,760)"/>
-    <wire from="(550,760)" to="(620,760)"/>
+    <wire from="(310,900)" to="(560,900)"/>
+    <wire from="(330,620)" to="(330,640)"/>
+    <wire from="(330,620)" to="(350,620)"/>
+    <wire from="(350,620)" to="(350,640)"/>
+    <wire from="(350,620)" to="(370,620)"/>
+    <wire from="(370,570)" to="(390,570)"/>
+    <wire from="(370,620)" to="(370,640)"/>
+    <wire from="(370,620)" to="(390,620)"/>
+    <wire from="(390,570)" to="(390,620)"/>
+    <wire from="(390,620)" to="(390,640)"/>
+    <wire from="(410,530)" to="(410,640)"/>
+    <wire from="(410,530)" to="(570,530)"/>
+    <wire from="(430,560)" to="(430,640)"/>
+    <wire from="(430,560)" to="(580,560)"/>
+    <wire from="(450,550)" to="(450,640)"/>
+    <wire from="(450,550)" to="(620,550)"/>
+    <wire from="(470,570)" to="(470,640)"/>
+    <wire from="(470,570)" to="(600,570)"/>
+    <wire from="(500,760)" to="(510,760)"/>
+    <wire from="(510,720)" to="(510,760)"/>
+    <wire from="(510,720)" to="(570,720)"/>
+    <wire from="(550,680)" to="(550,930)"/>
+    <wire from="(550,680)" to="(570,680)"/>
+    <wire from="(550,930)" to="(740,930)"/>
+    <wire from="(560,740)" to="(560,900)"/>
+    <wire from="(560,740)" to="(570,740)"/>
+    <wire from="(560,900)" to="(910,900)"/>
+    <wire from="(570,450)" to="(570,460)"/>
+    <wire from="(570,490)" to="(570,530)"/>
+    <wire from="(570,710)" to="(570,720)"/>
+    <wire from="(580,450)" to="(580,510)"/>
+    <wire from="(580,540)" to="(580,560)"/>
+    <wire from="(580,590)" to="(580,640)"/>
+    <wire from="(580,590)" to="(650,590)"/>
+    <wire from="(590,450)" to="(590,460)"/>
+    <wire from="(590,490)" to="(590,560)"/>
+    <wire from="(590,560)" to="(720,560)"/>
     <wire from="(60,740)" to="(100,740)"/>
-    <wire from="(620,760)" to="(620,960)"/>
-    <wire from="(620,760)" to="(680,760)"/>
-    <wire from="(620,960)" to="(710,960)"/>
-    <wire from="(650,870)" to="(710,870)"/>
-    <wire from="(660,790)" to="(660,900)"/>
-    <wire from="(660,790)" to="(680,790)"/>
-    <wire from="(660,900)" to="(710,900)"/>
+    <wire from="(600,450)" to="(600,510)"/>
+    <wire from="(600,540)" to="(600,570)"/>
+    <wire from="(600,600)" to="(600,640)"/>
+    <wire from="(600,600)" to="(660,600)"/>
+    <wire from="(610,450)" to="(610,460)"/>
+    <wire from="(610,490)" to="(610,570)"/>
+    <wire from="(610,570)" to="(700,570)"/>
+    <wire from="(620,450)" to="(620,510)"/>
+    <wire from="(620,540)" to="(620,550)"/>
+    <wire from="(620,580)" to="(620,640)"/>
+    <wire from="(620,580)" to="(630,580)"/>
+    <wire from="(630,450)" to="(630,460)"/>
+    <wire from="(630,490)" to="(630,580)"/>
+    <wire from="(640,450)" to="(640,510)"/>
+    <wire from="(640,540)" to="(640,640)"/>
+    <wire from="(650,450)" to="(650,460)"/>
+    <wire from="(650,490)" to="(650,590)"/>
+    <wire from="(660,450)" to="(660,510)"/>
+    <wire from="(660,540)" to="(660,600)"/>
+    <wire from="(660,610)" to="(660,640)"/>
+    <wire from="(660,610)" to="(680,610)"/>
+    <wire from="(670,450)" to="(670,460)"/>
+    <wire from="(670,490)" to="(670,620)"/>
+    <wire from="(670,620)" to="(680,620)"/>
+    <wire from="(680,450)" to="(680,510)"/>
+    <wire from="(680,540)" to="(680,610)"/>
+    <wire from="(680,620)" to="(680,640)"/>
+    <wire from="(700,570)" to="(700,640)"/>
+    <wire from="(720,560)" to="(720,640)"/>
+    <wire from="(740,1020)" to="(830,1020)"/>
+    <wire from="(740,930)" to="(740,1020)"/>
+    <wire from="(740,930)" to="(960,930)"/>
+    <wire from="(750,760)" to="(770,760)"/>
+    <wire from="(800,760)" to="(870,760)"/>
+    <wire from="(870,760)" to="(870,960)"/>
+    <wire from="(870,760)" to="(930,760)"/>
+    <wire from="(870,960)" to="(960,960)"/>
+    <wire from="(900,870)" to="(960,870)"/>
+    <wire from="(910,790)" to="(910,900)"/>
+    <wire from="(910,790)" to="(930,790)"/>
+    <wire from="(910,900)" to="(960,900)"/>
   </circuit>
   <circuit name="CD4021B_dff">
     <a name="appearance" val="custom"/>
