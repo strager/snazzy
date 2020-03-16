@@ -212,6 +212,7 @@ end TCL_Generic;&#13;
       <a name="label" val="SNES_clack"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="1" loc="(820,760)" name="NOT Gate"/>
     <comp lib="10" loc="(960,870)" name="Digital Oscilloscope"/>
     <comp lib="12" loc="(680,510)" name="snes_buttons">
       <a name="facing" val="south"/>
@@ -309,7 +310,8 @@ end TCL_Generic;&#13;
     <wire from="(740,1020)" to="(830,1020)"/>
     <wire from="(740,930)" to="(740,1020)"/>
     <wire from="(740,930)" to="(960,930)"/>
-    <wire from="(750,760)" to="(870,760)"/>
+    <wire from="(750,760)" to="(790,760)"/>
+    <wire from="(820,760)" to="(870,760)"/>
     <wire from="(870,760)" to="(870,960)"/>
     <wire from="(870,760)" to="(930,760)"/>
     <wire from="(870,960)" to="(960,960)"/>
@@ -801,6 +803,7 @@ end TCL_Generic;&#13;
       <a name="label" val="nQ"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="1" loc="(180,310)" name="NOT Gate"/>
     <comp lib="1" loc="(180,350)" name="NOT Gate"/>
     <comp lib="1" loc="(260,490)" name="NOT Gate"/>
     <comp lib="1" loc="(330,330)" name="AND Gate"/>
@@ -809,8 +812,9 @@ end TCL_Generic;&#13;
     <comp lib="4" loc="(350,400)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <wire from="(140,310)" to="(220,310)"/>
+    <wire from="(140,310)" to="(150,310)"/>
     <wire from="(140,350)" to="(150,350)"/>
+    <wire from="(180,310)" to="(220,310)"/>
     <wire from="(180,350)" to="(200,350)"/>
     <wire from="(200,350)" to="(200,530)"/>
     <wire from="(200,350)" to="(280,350)"/>
