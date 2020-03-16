@@ -180,6 +180,26 @@ class Buttons(typing.NamedTuple):
         return result
 
 
+Buttons.OFF = Buttons(
+    start=False,
+    select=False,
+    b=False,
+    y=False,
+    up=False,
+    down=False,
+    left=False,
+    right=False,
+    a=False,
+    x=False,
+    l=False,
+    r=False,
+    unused_12=False,
+    unused_13=False,
+    unused_14=False,
+    unused_15=False,
+)
+
+
 def extract_buttons_from_payload(payload: typing.List[bool]) -> Buttons:
     def bit(index: int) -> typing.Optional[bool]:
         return not payload[index]
@@ -533,36 +553,81 @@ class CircuitXML:
 
 
 def main() -> None:
-    expected_buttons = Buttons(
-        start=True,
-        select=True,
-        b=False,
-        y=False,
-        up=False,
-        down=False,
-        left=False,
-        right=False,
-        a=False,
-        x=False,
-        l=False,
-        r=False,
-        unused_12=False,
-        unused_13=False,
-        unused_14=False,
-        unused_15=False,
+    buttons_to_check = [
+        "b",
+        "y",
+        "select",
+        "start",
+        "up",
+        "down",
+        "left",
+        "right",
+        # TODO(strager): 'a', 'x', 'l', 'r'
+    ]
+    for button_to_check in buttons_to_check:
+        buttons = Buttons.OFF._replace(**{button_to_check: True})
+        check_buttons(buttons)
+
+    check_buttons(
+        Buttons(
+            start=True,
+            select=True,
+            b=False,
+            y=False,
+            up=False,
+            down=False,
+            left=False,
+            right=False,
+            a=False,
+            x=False,
+            l=False,
+            r=False,
+            unused_12=False,
+            unused_13=False,
+            unused_14=False,
+            unused_15=False,
+        )
+    )
+    check_buttons(
+        Buttons(
+            start=False,
+            select=False,
+            b=True,
+            y=False,
+            up=False,
+            down=False,
+            left=True,
+            right=False,
+            a=False,
+            x=False,
+            l=False,
+            r=False,
+            unused_12=False,
+            unused_13=False,
+            unused_14=False,
+            unused_15=False,
+        )
     )
 
-    ok = True
-    for poll_index, actual_buttons in enumerate(simulate(expected_buttons)):
-        if expected_buttons != actual_buttons:
-            sys.stderr.write(
-                f"error: mismatch between expected and observed buttons on poll #{poll_index}:\n"
-            )
-            sys.stderr.write(f"expected: {expected_buttons}\n")
-            sys.stderr.write(f"observed: {actual_buttons}\n")
-            ok = False
 
-    if not ok:
+def check_buttons(buttons: Buttons) -> None:
+    for poll_index, actual_buttons in enumerate(simulate(buttons)):
+        assert_buttons(
+            expected_buttons=buttons,
+            actual_buttons=actual_buttons,
+            poll_index=poll_index,
+        )
+
+
+def assert_buttons(
+    expected_buttons: Buttons, actual_buttons: Buttons, poll_index: int
+) -> None:
+    if expected_buttons != actual_buttons:
+        sys.stderr.write(
+            f"error: mismatch between expected and observed buttons on poll #{poll_index}:\n"
+        )
+        sys.stderr.write(f"expected: {expected_buttons}\n")
+        sys.stderr.write(f"observed: {actual_buttons}\n")
         exit(1)
 
 
