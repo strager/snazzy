@@ -199,14 +199,18 @@ end TCL_Generic;&#13;
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="263" y="83">left</text>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="263" y="93">right</text>
     </appear>
-    <comp lib="0" loc="(200,100)" name="Constant"/>
+    <comp lib="0" loc="(200,100)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(200,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="start_button"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(200,130)" name="Constant"/>
+    <comp lib="0" loc="(200,130)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(200,130)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>

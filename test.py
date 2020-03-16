@@ -1,7 +1,11 @@
+import io
+import pathlib
 import subprocess
 import sys
+import tempfile
 import typing
 import unittest
+import xml.etree.ElementTree as ElementTree
 
 
 class Sample(typing.NamedTuple):
@@ -342,21 +346,190 @@ def parse_payloads(samples: typing.List[Sample]) -> typing.List[Payload]:
     return payloads
 
 
-def simulate() -> typing.List[Buttons]:
-    output = subprocess.check_output(
-        [
-            "java",
-            "-jar",
-            r"C:\Users\strager\Downloads\logisim-evolution-3.3.1.jar",
-            "-tty",
-            "table",
-            "snazzy.circ",
-        ],
-        encoding="utf-8",
-    )
+def simulate(buttons: Buttons) -> typing.List[Buttons]:
+    buttons_circuit_xml = make_buttons_circuit(buttons)
+    with tempfile.TemporaryDirectory() as temporary_directory:
+        buttons_circuit_path = pathlib.Path(temporary_directory) / "buttons.circ"
+        buttons_circuit_path.write_text(buttons_circuit_xml)
+        output = subprocess.check_output(
+            [
+                "java",
+                "-jar",
+                r"C:\Users\strager\Downloads\logisim-evolution-3.3.1.jar",
+                "-tty",
+                "table",
+                "-sub",
+                "buttons.circ",
+                str(buttons_circuit_path),
+                "snazzy.circ",
+            ],
+            encoding="utf-8",
+        )
     samples = parse_samples(output)
     payloads = parse_payloads(samples)
     return [extract_buttons_from_payload(payload) for payload in payloads]
+
+
+def make_buttons_circuit(buttons: Buttons) -> str:
+    tree = ElementTree.parse("buttons.circ")
+
+    component_to_button_state = {
+        "start_button": buttons.start,
+        "select_button": buttons.select,
+        "b_button": buttons.b,
+        "y_button": buttons.y,
+        "up_button": buttons.up,
+        "down_button": buttons.down,
+        "left_button": buttons.left,
+        "right_button": buttons.right,
+        "a_button": buttons.a,
+        "x_button": buttons.x,
+        "l_button": buttons.l,
+        "r_button": buttons.r,
+    }
+
+    for component_label, button_state in component_to_button_state.items():
+        constant_node = CircuitXML.get_constant_component_of_pin_component(
+            tree, component_label
+        )
+        value_node = constant_node.find(".//a[@name='value']")
+        if button_state:
+            if value_node is None:
+                # 1 is the default value. Do nothing.
+                pass
+            else:
+                value_node.set("val", "0x1")
+        else:
+            if value_node is None:
+                ElementTree.SubElement(
+                    constant_node, "a", {"name": "value", "val": "0x0",}
+                )
+            else:
+                value_node.set("val", "0x0")
+
+    result_file = io.BytesIO()
+    encoding = "utf-8"
+    tree.write(result_file, encoding=encoding)
+    return result_file.getvalue().decode(encoding)
+
+
+class TestMakeButtonsCircuit(unittest.TestCase):
+    def test_all_buttons_off(self) -> None:
+        buttons = Buttons(
+            start=False,
+            select=False,
+            b=False,
+            y=False,
+            up=False,
+            down=False,
+            left=False,
+            right=False,
+            a=False,
+            x=False,
+            l=False,
+            r=False,
+            unused_12=False,
+            unused_13=False,
+            unused_14=False,
+            unused_15=False,
+        )
+        circuit_xml = make_buttons_circuit(buttons)
+        self.assert_circuit_has_buttons(circuit_xml, buttons)
+
+    def test_all_buttons_on(self) -> None:
+        buttons = Buttons(
+            start=True,
+            select=True,
+            b=True,
+            y=True,
+            up=True,
+            down=True,
+            left=True,
+            right=True,
+            a=True,
+            x=True,
+            l=True,
+            r=True,
+            unused_12=False,
+            unused_13=False,
+            unused_14=False,
+            unused_15=False,
+        )
+        circuit_xml = make_buttons_circuit(buttons)
+        self.assert_circuit_has_buttons(circuit_xml, buttons)
+
+    def assert_circuit_has_buttons(
+        self, circuit_xml: str, expected_buttons: Buttons
+    ) -> None:
+        tree = ElementTree.fromstring(circuit_xml)
+
+        def get(pin_label: str) -> int:
+            return CircuitXML.get_constant_value_of_pin_component(tree, pin_label)
+
+        self.assertEqual(get("start_button"), int(expected_buttons.start))
+        self.assertEqual(get("select_button"), int(expected_buttons.select))
+        self.assertEqual(get("b_button"), int(expected_buttons.b))
+        self.assertEqual(get("y_button"), int(expected_buttons.y))
+        self.assertEqual(get("up_button"), int(expected_buttons.up))
+        self.assertEqual(get("down_button"), int(expected_buttons.down))
+        self.assertEqual(get("left_button"), int(expected_buttons.left))
+        self.assertEqual(get("right_button"), int(expected_buttons.right))
+        self.assertEqual(get("a_button"), int(expected_buttons.a))
+        self.assertEqual(get("x_button"), int(expected_buttons.x))
+        self.assertEqual(get("l_button"), int(expected_buttons.l))
+        self.assertEqual(get("r_button"), int(expected_buttons.r))
+
+
+class CircuitXML:
+    @staticmethod
+    def get_constant_value_of_pin_component(tree, pin_label: str) -> int:
+        constant_node = CircuitXML.get_constant_component_of_pin_component(
+            tree, pin_label
+        )
+        return CircuitXML.get_value_of_constant_component(constant_node)
+
+    @staticmethod
+    def get_constant_component_of_pin_component(tree, pin_label: str):
+        pin_node = CircuitXML.find_pin_component_with_label(tree, pin_label)
+        if pin_node is None:
+            raise Error(f"{pin_label} pin component is missing")
+        pin_location = pin_node.get("loc")
+        if pin_location is None:
+            raise Error(
+                f"{pin_label} pin component is missing a location ('loc' attribute)"
+            )
+        constant_node = CircuitXML.find_constant_component_at_location(
+            tree, pin_location
+        )
+        if constant_node is None:
+            raise Error(
+                f"{pin_label} pin component has no corresponding constant component (at location {pin_location})"
+            )
+        return constant_node
+
+    @staticmethod
+    def find_pin_component_with_label(tree, label: str) -> typing.Optional:
+        for pin_node in tree.findall(".//comp[@name='Pin']"):
+            label_node = pin_node.find(".//a[@name='label']")
+            if label_node is not None:
+                if label_node.get("val") == label:
+                    return pin_node
+        return None
+
+    @staticmethod
+    def find_constant_component_at_location(tree, location: str) -> typing.Optional:
+        for constant_node in tree.findall(".//comp[@name='Constant']"):
+            if constant_node.get("loc") == location:
+                return constant_node
+        return None
+
+    @staticmethod
+    def get_value_of_constant_component(constant_node) -> int:
+        value_node = constant_node.find(".//a[@name='value']")
+        if value_node is None:
+            return 1
+        else:
+            return int(value_node.get("val"), 16)
 
 
 def main() -> None:
@@ -380,7 +553,7 @@ def main() -> None:
     )
 
     ok = True
-    for poll_index, actual_buttons in enumerate(simulate()):
+    for poll_index, actual_buttons in enumerate(simulate(expected_buttons)):
         if expected_buttons != actual_buttons:
             sys.stderr.write(
                 f"error: mismatch between expected and observed buttons on poll #{poll_index}:\n"
