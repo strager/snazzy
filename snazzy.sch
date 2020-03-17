@@ -984,9 +984,9 @@ Wire Wire Line
 	5350 2950 5350 3000
 Wire Wire Line
 	5850 2050 5850 1000
-Wire Wire Line
-	5850 1000 5350 1000
 Connection ~ 5350 1000
 Wire Wire Line
 	5350 1000 5350 1300
+Wire Wire Line
+	5850 1000 5350 1000
 $EndSCHEMATC
