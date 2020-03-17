@@ -571,6 +571,16 @@ def main() -> None:
         buttons = Buttons.OFF._replace(**{button_to_check: True})
         check_buttons(buttons)
 
+    # Prevent opposite directional inputs (left+right, up+down).
+    check_buttons(
+        input_buttons=Buttons.OFF._replace(left=True, right=True),
+        expected_buttons=Buttons.OFF._replace(left=False, right=False),
+    )
+    check_buttons(
+        input_buttons=Buttons.OFF._replace(up=True, down=True),
+        expected_buttons=Buttons.OFF._replace(up=False, down=False),
+    )
+
     check_buttons(
         Buttons(
             start=True,
@@ -613,10 +623,14 @@ def main() -> None:
     )
 
 
-def check_buttons(buttons: Buttons) -> None:
-    for poll_index, actual_buttons in enumerate(simulate(buttons)):
+def check_buttons(
+    input_buttons: Buttons, expected_buttons: typing.Optional[Buttons] = None
+) -> None:
+    if expected_buttons is None:
+        expected_buttons = input_buttons
+    for poll_index, actual_buttons in enumerate(simulate(input_buttons)):
         assert_buttons(
-            expected_buttons=buttons,
+            expected_buttons=expected_buttons,
             actual_buttons=actual_buttons,
             poll_index=poll_index,
         )
