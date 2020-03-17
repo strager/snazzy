@@ -37,10 +37,8 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4021B.pdf" H 7100 2250 
 $EndComp
 Text GLabel 4950 1500 0    50   Input ~ 0
 SNES_clack
-Text GLabel 4300 1050 0    50   Input ~ 0
+Text GLabel 4300 1150 0    50   Input ~ 0
 SNES_latch
-Text GLabel 4300 1150 0    50   Output ~ 0
-SNES_data1
 $Comp
 L power:GND #PWR026
 U 1 1 5E72AC27
@@ -935,4 +933,6 @@ F 3 "~" H 4500 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4300 800 
+Text GLabel 4300 1050 0    50   Output ~ 0
+SNES_data1
 $EndSCHEMATC
