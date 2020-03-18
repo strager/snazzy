@@ -490,19 +490,19 @@ Connection ~ 3000 3600
 Text Label 3500 3600 2    50   ~ 0
 BTN_R
 Text Label 6650 2000 0    50   ~ 0
-BTN_RIGHT
+VBTN_RIGHT
 Wire Wire Line
 	7150 2000 6650 2000
 Text Label 6650 2100 0    50   ~ 0
-BTN_LEFT
+VBTN_LEFT
 Wire Wire Line
 	7150 2100 6650 2100
 Text Label 6650 2200 0    50   ~ 0
-BTN_DOWN
+VBTN_DOWN
 Wire Wire Line
 	7150 2200 6650 2200
 Text Label 6650 2300 0    50   ~ 0
-BTN_UP
+VBTN_UP
 Wire Wire Line
 	7150 2300 6650 2300
 Text Label 6650 2600 0    50   ~ 0
@@ -1003,63 +1003,261 @@ Wire Wire Line
 $Comp
 L 74xx:74HC04 U3
 U 7 1 5E7BAF46
-P 5350 4300
-F 0 "U3" H 5580 4346 50  0000 L CNN
-F 1 "74HC04" H 5580 4255 50  0000 L CNN
-F 2 "" H 5350 4300 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5350 4300 50  0001 C CNN
-	7    5350 4300
+P 5350 4700
+F 0 "U3" H 5580 4746 50  0000 L CNN
+F 1 "74HC04" H 5580 4655 50  0000 L CNN
+F 2 "" H 5350 4700 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5350 4700 50  0001 C CNN
+	7    5350 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C3
 U 1 1 5E7BFF07
-P 6050 4300
-F 0 "C3" H 6165 4346 50  0000 L CNN
-F 1 "100n" H 6165 4255 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 6088 4150 50  0001 C CNN
-F 3 "~" H 6050 4300 50  0001 C CNN
-	1    6050 4300
+P 6050 4700
+F 0 "C3" H 6165 4746 50  0000 L CNN
+F 1 "100n" H 6165 4655 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 6088 4550 50  0001 C CNN
+F 3 "~" H 6050 4700 50  0001 C CNN
+	1    6050 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0103
 U 1 1 5E7C087B
-P 5350 4950
-F 0 "#PWR0103" H 5350 4700 50  0001 C CNN
-F 1 "GND" V 5355 4822 50  0000 R CNN
-F 2 "" H 5350 4950 50  0001 C CNN
-F 3 "" H 5350 4950 50  0001 C CNN
-	1    5350 4950
+P 5350 5300
+F 0 "#PWR0103" H 5350 5050 50  0001 C CNN
+F 1 "GND" V 5355 5172 50  0000 R CNN
+F 2 "" H 5350 5300 50  0001 C CNN
+F 3 "" H 5350 5300 50  0001 C CNN
+	1    5350 5300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 4800 5350 4850
+	5350 5200 5350 5250
 Wire Wire Line
-	5350 4850 6050 4850
+	5350 5250 6050 5250
 Wire Wire Line
-	6050 4850 6050 4450
-Connection ~ 5350 4850
+	6050 5250 6050 4850
+Connection ~ 5350 5250
 Wire Wire Line
-	5350 4850 5350 4950
+	5350 5250 5350 5300
 Wire Wire Line
-	5350 3800 5350 3750
+	5350 4200 5350 4150
 Wire Wire Line
-	5350 3750 6050 3750
+	5350 4150 6050 4150
 Wire Wire Line
-	6050 3750 6050 4150
+	6050 4150 6050 4550
 Wire Wire Line
-	5350 3750 5350 3700
-Connection ~ 5350 3750
+	5350 4150 5350 4100
+Connection ~ 5350 4150
 $Comp
 L power:+5V #PWR0104
 U 1 1 5E7CAE0E
-P 5350 3700
-F 0 "#PWR0104" H 5350 3550 50  0001 C CNN
-F 1 "+5V" V 5365 3828 50  0000 L CNN
-F 2 "" H 5350 3700 50  0001 C CNN
-F 3 "" H 5350 3700 50  0001 C CNN
-	1    5350 3700
+P 5350 4100
+F 0 "#PWR0104" H 5350 3950 50  0001 C CNN
+F 1 "+5V" V 5365 4228 50  0000 L CNN
+F 2 "" H 5350 4100 50  0001 C CNN
+F 3 "" H 5350 4100 50  0001 C CNN
+	1    5350 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L snazzy-vendor:74HC08 U4
+U 1 1 5E7E508C
+P 1950 5050
+F 0 "U4" V 1904 5238 50  0000 L CNN
+F 1 "74HC08" V 1995 5238 50  0000 L CNN
+F 2 "" H 1950 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 5050 50  0001 C CNN
+	1    1950 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L snazzy-vendor:74HC08 U4
+U 5 1 5E7EC5FF
+P 7050 4700
+F 0 "U4" V 6683 4700 50  0000 C CNN
+F 1 "74HC08" V 6774 4700 50  0000 C CNN
+F 2 "" H 7050 4700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 7050 4700 50  0001 C CNN
+	5    7050 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L 74xx:74HC04 U3
+U 2 1 5E7ED71B
+P 1350 4950
+F 0 "U3" H 1350 4633 50  0000 C CNN
+F 1 "74HC04" H 1350 4724 50  0000 C CNN
+F 2 "" H 1350 4950 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 4950 50  0001 C CNN
+	2    1350 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U3
+U 3 1 5E7EE526
+P 1350 5950
+F 0 "U3" V 1304 6130 50  0000 L CNN
+F 1 "74HC04" V 1395 6130 50  0000 L CNN
+F 2 "" H 1350 5950 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 5950 50  0001 C CNN
+	3    1350 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5150 600  5150
+Text Label 600  5150 0    50   ~ 0
+BTN_UP
+Wire Wire Line
+	1050 4950 600  4950
+Text Label 600  4950 0    50   ~ 0
+BTN_DOWN
+Text Label 600  5750 0    50   ~ 0
+BTN_DOWN
+Text Label 600  5950 0    50   ~ 0
+BTN_UP
+Wire Wire Line
+	600  5950 1050 5950
+Wire Wire Line
+	600  5750 1650 5750
+Wire Wire Line
+	2250 5850 2700 5850
+Wire Wire Line
+	2250 5050 2700 5050
+Text Label 2700 5850 2    50   ~ 0
+VBTN_DOWN
+Text Label 2700 5050 2    50   ~ 0
+VBTN_UP
+$Comp
+L snazzy-vendor:74HC08 U4
+U 2 1 5E7E8B72
+P 1950 5850
+F 0 "U4" V 1904 6038 50  0000 L CNN
+F 1 "74HC08" V 1995 6038 50  0000 L CNN
+F 2 "" H 1950 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 5850 50  0001 C CNN
+	2    1950 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L snazzy-vendor:74HC08 U4
+U 3 1 5E7EA4A4
+P 1950 6650
+F 0 "U4" V 1904 6838 50  0000 L CNN
+F 1 "74HC08" V 1995 6838 50  0000 L CNN
+F 2 "" H 1950 6650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 6650 50  0001 C CNN
+	3    1950 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L snazzy-vendor:74HC08 U4
+U 4 1 5E7EB896
+P 1950 7450
+F 0 "U4" V 1904 7638 50  0000 L CNN
+F 1 "74HC08" V 1995 7638 50  0000 L CNN
+F 2 "" H 1950 7450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 7450 50  0001 C CNN
+	4    1950 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U3
+U 4 1 5E7EECCA
+P 1350 6550
+F 0 "U3" H 1350 6867 50  0000 C CNN
+F 1 "74HC04" H 1350 6776 50  0000 C CNN
+F 2 "" H 1350 6550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 6550 50  0001 C CNN
+	4    1350 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U3
+U 5 1 5E7EF618
+P 1350 7550
+F 0 "U3" V 1304 7730 50  0000 L CNN
+F 1 "74HC04" V 1395 7730 50  0000 L CNN
+F 2 "" H 1350 7550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 7550 50  0001 C CNN
+	5    1350 7550
+	1    0    0    -1  
+$EndComp
+Text Label 600  6750 0    50   ~ 0
+BTN_LEFT
+Text Label 600  6550 0    50   ~ 0
+BTN_RIGHT
+Text Label 600  7350 0    50   ~ 0
+BTN_RIGHT
+Text Label 600  7550 0    50   ~ 0
+BTN_LEFT
+Wire Wire Line
+	600  7550 1050 7550
+Wire Wire Line
+	600  6550 1050 6550
+Wire Wire Line
+	600  7350 1650 7350
+Wire Wire Line
+	600  6750 1650 6750
+Wire Wire Line
+	2250 7450 2700 7450
+Text Label 2700 6650 2    50   ~ 0
+VBTN_LEFT
+Wire Wire Line
+	2250 6650 2700 6650
+Text Label 2700 7450 2    50   ~ 0
+VBTN_RIGHT
+$Comp
+L Device:C C4
+U 1 1 5E991520
+P 7650 4750
+F 0 "C4" H 7765 4796 50  0000 L CNN
+F 1 "100n" H 7765 4705 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" H 7688 4600 50  0001 C CNN
+F 3 "~" H 7650 4750 50  0001 C CNN
+	1    7650 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4200 7050 4150
+Wire Wire Line
+	7050 4150 7650 4150
+Wire Wire Line
+	7650 4150 7650 4600
+Wire Wire Line
+	7650 4900 7650 5250
+Wire Wire Line
+	7650 5250 7050 5250
+Wire Wire Line
+	7050 5250 7050 5200
+Wire Wire Line
+	7050 5250 7050 5300
+Connection ~ 7050 5250
+Wire Wire Line
+	7050 4150 7050 4100
+Connection ~ 7050 4150
+$Comp
+L power:+5V #PWR0105
+U 1 1 5E9A298A
+P 7050 4100
+F 0 "#PWR0105" H 7050 3950 50  0001 C CNN
+F 1 "+5V" V 7065 4228 50  0000 L CNN
+F 2 "" H 7050 4100 50  0001 C CNN
+F 3 "" H 7050 4100 50  0001 C CNN
+	1    7050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5E9A330D
+P 7050 5300
+F 0 "#PWR0106" H 7050 5050 50  0001 C CNN
+F 1 "GND" V 7055 5172 50  0000 R CNN
+F 2 "" H 7050 5300 50  0001 C CNN
+F 3 "" H 7050 5300 50  0001 C CNN
+	1    7050 5300
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
