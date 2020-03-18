@@ -115,7 +115,7 @@ U 1 1 5E735D45
 P 1200 950
 F 0 "R1" V 1407 950 50  0000 C CNN
 F 1 "10k" V 1316 950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 1130 950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 950 50  0001 C CNN
 F 3 "~" H 1200 950 50  0001 C CNN
 	1    1200 950 
 	0    1    1    0   
@@ -141,7 +141,7 @@ U 1 1 5E77B127
 P 1200 1500
 F 0 "R2" V 1407 1500 50  0000 C CNN
 F 1 "10k" V 1316 1500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 1130 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 1500 50  0001 C CNN
 F 3 "~" H 1200 1500 50  0001 C CNN
 	1    1200 1500
 	0    1    1    0   
@@ -185,7 +185,7 @@ U 1 1 5E796713
 P 1200 2050
 F 0 "R3" V 1407 2050 50  0000 C CNN
 F 1 "10k" V 1316 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 1130 2050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 2050 50  0001 C CNN
 F 3 "~" H 1200 2050 50  0001 C CNN
 	1    1200 2050
 	0    1    1    0   
@@ -216,7 +216,7 @@ U 1 1 5E7AAD67
 P 2850 950
 F 0 "R7" V 3057 950 50  0000 C CNN
 F 1 "10k" V 2966 950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2780 950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 950 50  0001 C CNN
 F 3 "~" H 2850 950 50  0001 C CNN
 	1    2850 950 
 	0    1    1    0   
@@ -242,7 +242,7 @@ U 1 1 5E7AAD91
 P 2850 1500
 F 0 "R8" V 3057 1500 50  0000 C CNN
 F 1 "10k" V 2966 1500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2780 1500 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 1500 50  0001 C CNN
 F 3 "~" H 2850 1500 50  0001 C CNN
 	1    2850 1500
 	0    1    1    0   
@@ -278,7 +278,7 @@ U 1 1 5E7AADC1
 P 2850 2050
 F 0 "R9" V 3057 2050 50  0000 C CNN
 F 1 "10k" V 2966 2050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2780 2050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 2050 50  0001 C CNN
 F 3 "~" H 2850 2050 50  0001 C CNN
 	1    2850 2050
 	0    1    1    0   
@@ -309,7 +309,7 @@ U 1 1 5E7EAA37
 P 1200 2600
 F 0 "R4" V 1407 2600 50  0000 C CNN
 F 1 "10k" V 1316 2600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 1130 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 2600 50  0001 C CNN
 F 3 "~" H 1200 2600 50  0001 C CNN
 	1    1200 2600
 	0    1    1    0   
@@ -335,7 +335,7 @@ U 1 1 5E7EAA61
 P 1200 3150
 F 0 "R5" V 1407 3150 50  0000 C CNN
 F 1 "10k" V 1316 3150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 1130 3150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 3150 50  0001 C CNN
 F 3 "~" H 1200 3150 50  0001 C CNN
 	1    1200 3150
 	0    1    1    0   
@@ -371,7 +371,7 @@ U 1 1 5E7EAA91
 P 1200 3700
 F 0 "R6" V 1407 3700 50  0000 C CNN
 F 1 "10k" V 1316 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 1130 3700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 3700 50  0001 C CNN
 F 3 "~" H 1200 3700 50  0001 C CNN
 	1    1200 3700
 	0    1    1    0   
@@ -402,7 +402,7 @@ U 1 1 5E7EAABE
 P 2850 2600
 F 0 "R10" V 3057 2600 50  0000 C CNN
 F 1 "10k" V 2966 2600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2780 2600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 2600 50  0001 C CNN
 F 3 "~" H 2850 2600 50  0001 C CNN
 	1    2850 2600
 	0    1    1    0   
@@ -428,7 +428,7 @@ U 1 1 5E7EAAE8
 P 2850 3150
 F 0 "R11" V 3057 3150 50  0000 C CNN
 F 1 "10k" V 2966 3150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2780 3150 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 3150 50  0001 C CNN
 F 3 "~" H 2850 3150 50  0001 C CNN
 	1    2850 3150
 	0    1    1    0   
@@ -464,7 +464,7 @@ U 1 1 5E7EAB18
 P 2850 3700
 F 0 "R12" V 3057 3700 50  0000 C CNN
 F 1 "10k" V 2966 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2780 3700 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 3700 50  0001 C CNN
 F 3 "~" H 2850 3700 50  0001 C CNN
 	1    2850 3700
 	0    1    1    0   
@@ -987,17 +987,6 @@ F 3 "" H 4450 2300 50  0001 C CNN
 	1    4450 2300
 	0    1    1    0   
 $EndComp
-$Comp
-L 74xx:74HC04 U3
-U 1 1 5E797903
-P 8250 1700
-F 0 "U3" H 8250 2017 50  0000 C CNN
-F 1 "74HC04" H 8250 1926 50  0000 C CNN
-F 2 "" H 8250 1700 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8250 1700 50  0001 C CNN
-	1    8250 1700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6050 1800 7150 1800
 $Comp
@@ -1006,7 +995,7 @@ U 7 1 5E7BAF46
 P 5350 4700
 F 0 "U3" H 5580 4746 50  0000 L CNN
 F 1 "74HC04" H 5580 4655 50  0000 L CNN
-F 2 "" H 5350 4700 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5350 4700 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5350 4700 50  0001 C CNN
 	7    5350 4700
 	1    0    0    -1  
@@ -1064,13 +1053,13 @@ F 3 "" H 5350 4100 50  0001 C CNN
 $EndComp
 $Comp
 L snazzy-vendor:74HC08 U4
-U 1 1 5E7E508C
+U 3 1 5E7E508C
 P 1950 5050
-F 0 "U4" V 1904 5238 50  0000 L CNN
-F 1 "74HC08" V 1995 5238 50  0000 L CNN
-F 2 "" H 1950 5050 50  0001 C CNN
+F 0 "U4" H 1950 5375 50  0000 C CNN
+F 1 "74HC08" H 1950 5284 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 1950 5050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 5050 50  0001 C CNN
-	1    1950 5050
+	3    1950 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1079,31 +1068,20 @@ U 5 1 5E7EC5FF
 P 7050 4700
 F 0 "U4" V 6683 4700 50  0000 C CNN
 F 1 "74HC08" V 6774 4700 50  0000 C CNN
-F 2 "" H 7050 4700 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7050 4700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 7050 4700 50  0001 C CNN
 	5    7050 4700
 	-1   0    0    1   
 $EndComp
 $Comp
 L 74xx:74HC04 U3
-U 2 1 5E7ED71B
-P 1350 4950
-F 0 "U3" H 1350 4633 50  0000 C CNN
-F 1 "74HC04" H 1350 4724 50  0000 C CNN
-F 2 "" H 1350 4950 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 4950 50  0001 C CNN
-	2    1350 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC04 U3
 U 3 1 5E7EE526
-P 1350 5950
-F 0 "U3" V 1304 6130 50  0000 L CNN
-F 1 "74HC04" V 1395 6130 50  0000 L CNN
-F 2 "" H 1350 5950 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 5950 50  0001 C CNN
-	3    1350 5950
+P 3600 5200
+F 0 "U3" H 3600 4975 50  0000 C CNN
+F 1 "74HC04" H 3600 4884 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3600 5200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3600 5200 50  0001 C CNN
+	3    3600 5200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1114,100 +1092,66 @@ Wire Wire Line
 	1050 4950 600  4950
 Text Label 600  4950 0    50   ~ 0
 BTN_DOWN
-Text Label 600  5750 0    50   ~ 0
+Text Label 2850 5000 0    50   ~ 0
 BTN_DOWN
-Text Label 600  5950 0    50   ~ 0
+Text Label 2850 5200 0    50   ~ 0
 BTN_UP
 Wire Wire Line
-	600  5950 1050 5950
+	2850 5200 3300 5200
 Wire Wire Line
-	600  5750 1650 5750
+	2850 5000 3900 5000
 Wire Wire Line
-	2250 5850 2700 5850
+	4500 5100 4950 5100
 Wire Wire Line
 	2250 5050 2700 5050
-Text Label 2700 5850 2    50   ~ 0
+Text Label 4950 5100 2    50   ~ 0
 VBTN_DOWN
 Text Label 2700 5050 2    50   ~ 0
 VBTN_UP
 $Comp
 L snazzy-vendor:74HC08 U4
-U 2 1 5E7E8B72
-P 1950 5850
-F 0 "U4" V 1904 6038 50  0000 L CNN
-F 1 "74HC08" V 1995 6038 50  0000 L CNN
-F 2 "" H 1950 5850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 5850 50  0001 C CNN
-	2    1950 5850
+U 4 1 5E7E8B72
+P 4200 5100
+F 0 "U4" H 4200 5425 50  0000 C CNN
+F 1 "74HC08" H 4200 5334 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4200 5100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 4200 5100 50  0001 C CNN
+	4    4200 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L snazzy-vendor:74HC08 U4
-U 3 1 5E7EA4A4
-P 1950 6650
-F 0 "U4" V 1904 6838 50  0000 L CNN
-F 1 "74HC08" V 1995 6838 50  0000 L CNN
-F 2 "" H 1950 6650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 6650 50  0001 C CNN
-	3    1950 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L snazzy-vendor:74HC08 U4
-U 4 1 5E7EB896
-P 1950 7450
-F 0 "U4" V 1904 7638 50  0000 L CNN
-F 1 "74HC08" V 1995 7638 50  0000 L CNN
-F 2 "" H 1950 7450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 7450 50  0001 C CNN
-	4    1950 7450
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC04 U3
-U 4 1 5E7EECCA
-P 1350 6550
-F 0 "U3" H 1350 6867 50  0000 C CNN
-F 1 "74HC04" H 1350 6776 50  0000 C CNN
-F 2 "" H 1350 6550 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 6550 50  0001 C CNN
-	4    1350 6550
+U 2 1 5E7EB896
+P 4200 6050
+F 0 "U4" H 4200 6375 50  0000 C CNN
+F 1 "74HC08" H 4200 6284 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4200 6050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 4200 6050 50  0001 C CNN
+	2    4200 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74HC04 U3
 U 5 1 5E7EF618
-P 1350 7550
-F 0 "U3" V 1304 7730 50  0000 L CNN
-F 1 "74HC04" V 1395 7730 50  0000 L CNN
-F 2 "" H 1350 7550 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 7550 50  0001 C CNN
-	5    1350 7550
+P 3600 6150
+F 0 "U3" H 3600 5925 50  0000 C CNN
+F 1 "74HC04" H 3600 5834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3600 6150 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3600 6150 50  0001 C CNN
+	5    3600 6150
 	1    0    0    -1  
 $EndComp
-Text Label 600  6750 0    50   ~ 0
-BTN_LEFT
-Text Label 600  6550 0    50   ~ 0
+Text Label 2850 5950 0    50   ~ 0
 BTN_RIGHT
-Text Label 600  7350 0    50   ~ 0
-BTN_RIGHT
-Text Label 600  7550 0    50   ~ 0
+Text Label 2850 6150 0    50   ~ 0
 BTN_LEFT
 Wire Wire Line
-	600  7550 1050 7550
+	2850 6150 3300 6150
 Wire Wire Line
-	600  6550 1050 6550
+	2850 5950 3900 5950
 Wire Wire Line
-	600  7350 1650 7350
-Wire Wire Line
-	600  6750 1650 6750
-Wire Wire Line
-	2250 7450 2700 7450
-Text Label 2700 6650 2    50   ~ 0
-VBTN_LEFT
-Wire Wire Line
-	2250 6650 2700 6650
-Text Label 2700 7450 2    50   ~ 0
+	4500 6050 4950 6050
+Text Label 4950 6050 2    50   ~ 0
 VBTN_RIGHT
 $Comp
 L Device:C C4
@@ -1258,6 +1202,62 @@ F 1 "GND" V 7055 5172 50  0000 R CNN
 F 2 "" H 7050 5300 50  0001 C CNN
 F 3 "" H 7050 5300 50  0001 C CNN
 	1    7050 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U3
+U 2 1 5E7ED71B
+P 1350 4950
+F 0 "U3" H 1350 5267 50  0000 C CNN
+F 1 "74HC04" H 1350 5176 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 1350 4950 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 4950 50  0001 C CNN
+	2    1350 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC04 U3
+U 1 1 5E797903
+P 8250 1700
+F 0 "U3" H 8250 2017 50  0000 C CNN
+F 1 "74HC04" H 8250 1926 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 8250 1700 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8250 1700 50  0001 C CNN
+	1    8250 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 6050 2700 6050
+Text Label 2700 6050 2    50   ~ 0
+VBTN_LEFT
+Wire Wire Line
+	600  6150 1650 6150
+Wire Wire Line
+	600  5950 1050 5950
+Text Label 600  5950 0    50   ~ 0
+BTN_RIGHT
+Text Label 600  6150 0    50   ~ 0
+BTN_LEFT
+$Comp
+L 74xx:74HC04 U3
+U 4 1 5E7EECCA
+P 1350 5950
+F 0 "U3" H 1350 6267 50  0000 C CNN
+F 1 "74HC04" H 1350 6176 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 1350 5950 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1350 5950 50  0001 C CNN
+	4    1350 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L snazzy-vendor:74HC08 U4
+U 1 1 5E7EA4A4
+P 1950 6050
+F 0 "U4" H 1950 6375 50  0000 C CNN
+F 1 "74HC08" H 1950 6284 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 1950 6050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc08.pdf" H 1950 6050 50  0001 C CNN
+	1    1950 6050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
