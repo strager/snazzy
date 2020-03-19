@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC08
+D quad 2-input AND gate
+K nand 2-input
+F http://www.ti.com/lit/ds/symlink/sn74hc08.pdf
+$ENDCMP
+#
+#End Doc Library
