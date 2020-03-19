@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 6)
+    (drawings 7)
     (tracks 348)
     (zones 0)
     (modules 34)
@@ -12,6 +12,7 @@
   (page A4)
   (title_block
     (title "snazzy SNES controller")
+    (rev v1)
   )
 
   (layers
@@ -1972,6 +1973,9 @@
     )
   )
 
+  (gr_text "snazzy v1" (at 164.465 125.73) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify right))
+  )
   (dimension 53.34 (width 0.12) (layer F.Fab)
     (gr_text "53.340 mm" (at 86.36 100.965 270) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
