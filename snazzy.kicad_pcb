@@ -34,7 +34,7 @@
     (46 B.CrtYd user)
     (47 F.CrtYd user)
     (48 B.Fab user)
-    (49 F.Fab user hide)
+    (49 F.Fab user)
   )
 
   (setup
@@ -1972,8 +1972,8 @@
     )
   )
 
-  (dimension 53.34 (width 0.12) (layer B.SilkS)
-    (gr_text "53.340 mm" (at 86.36 100.965 270) (layer B.SilkS)
+  (dimension 53.34 (width 0.12) (layer F.Fab)
+    (gr_text "53.340 mm" (at 86.36 100.965 270) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (feature1 (pts (xy 107.95 127.635) (xy 87.043579 127.635)))
@@ -1984,8 +1984,8 @@
     (arrow2a (pts (xy 87.63 74.295) (xy 87.043579 75.421504)))
     (arrow2b (pts (xy 87.63 74.295) (xy 88.216421 75.421504)))
   )
-  (dimension 57.785 (width 0.12) (layer B.SilkS)
-    (gr_text "57.785 mm" (at 136.8425 64.770001) (layer B.SilkS)
+  (dimension 57.785 (width 0.12) (layer F.Fab)
+    (gr_text "57.785 mm" (at 136.8425 64.770001) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (feature1 (pts (xy 107.95 74.295) (xy 107.95 65.45358)))
@@ -2350,7 +2350,7 @@
   (segment (start 115.57 94.145998) (end 117.735997 91.980001) (width 0.25) (layer B.Cu) (net 33))
   (segment (start 115.57 97.155) (end 115.57 94.145998) (width 0.25) (layer B.Cu) (net 33))
 
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5E72E32D) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5E7313C8) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
